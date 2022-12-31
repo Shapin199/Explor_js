@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>my list</h1>
+        <ul id="myList">
+            <li class="iteam">Lorem, ipsum dolor.</li>
+            <li class="iteam">In, nihil dolorem?</li>
+            <li class="iteam">Voluptate, sed esse.</li>
+            <li class="iteam">Iure, explicabo minima?</li>
+            <li class="iteam">Ex, provident consequatur.</li>
+        </ul>
+        <button id="addNew">Add new Button</button>
+    </div>
+    <script>
+        var iteams = document.getElementsByClassName('iteam');
+        // for(let i=0;i<iteams.length;i++)
+        // {
+        //     var iteam = iteams[i];
+        //     iteam.addEventListener('click',function(event){
+        //         // console.log(this);
+        //         // console.log(event.target);
+        //         // console.log(event.target.parentNode);
+        //         // console.log(event.target.innerText);
+        //         event.target.parentNode.removeChild(event.target)
+        //     })
+
+        // }
+        document.getElementById('addNew').addEventListener('click',function(event){
+        var iteamParent = document.getElementById('myList');
+        var newIteam = document.createElement('li');
+        newIteam.innerText = 'Shapin is the boss';
+        iteamParent.appendChild(newIteam); 
+        })
+        document.getElementById('myList').addEventListener('click',function(event){
+            // console.log(this,event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+    </script>
+</body>
+</html>

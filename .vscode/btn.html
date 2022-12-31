@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event management company</title>
+</head>
+<body>
+    <h3>Exploring Event</h3>
+    <button>clike me-1</button>
+    <button id="second">clike me-2</button>
+    <button>clike me-3</button>
+    <button id="lastPerson">clike me-4</button>
+    <script>
+        var secondButton = document.getElementById('second');
+
+        // 1st way
+        // secondButton.onclick = function(){
+        //     console.log("second prrson click");
+        // }
+
+        // 2nd way 
+        // function handclick(){
+        //     document.body.style.backgroundColor = 'cyan';
+        // }
+        // secondButton.onclick = handclick;
+
+        // 3rd way
+        function handclick(){
+            document.body.style.backgroundColor = 'cyan';
+        }
+        secondButton.addEventListener('click',handclick);
+
+        // 4th way
+        document.getElementById('lastPerson').addEventListener('click',function(){
+            document.body.style.color = 'tomato';
+        })
+
+    </script>
+</body>
+</html>
